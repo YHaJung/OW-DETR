@@ -128,8 +128,8 @@ OW-DETR/
 The splits are present inside `data/VOC2007/OWDETR/ImageSets/` folder.
 1. Make empty `JPEGImages` and `Annotations` directory.
 ```
-mkdir data/VOC2007/OWDETR/JPEGImages/
-mkdir data/VOC2007/OWDETR/Annotations/
+mkdir data/OWDETR/VOC2007/JPEGImages/
+mkdir data/OWDETR/VOC2007/Annotations/
 ```
 2. Download the COCO Images and Annotations from [coco dataset](https://cocodataset.org/#download).
 3. Unzip train2017 and val2017 folder. The current directory structure should look like:
@@ -144,8 +144,8 @@ OW-DETR/
 4. Move all images from `train2017/` and `val2017/` to `JPEGImages` folder.
 ```
 cd OW-DETR/data
-mv data/coco/train2017/*.jpg data/VOC2007/OWDETR/JPEGImages/.
-mv data/coco/val2017/*.jpg data/VOC2007/OWDETR/JPEGImages/.
+mv data/coco/train2017/*.jpg data/OWDETR/VOC2007/JPEGImages/.
+mv data/coco/val2017/*.jpg data/OWDETR/VOC2007/JPEGImages/.
 ```
 5. Use the code `coco2voc.py` for converting json annotations to xml files.
 
@@ -153,8 +153,8 @@ The files should be organized in the following structure:
 ```
 OW-DETR/
 └── data/
-    └── VOC2007/
-        └── OWDETR/
+    └── OWDETR/
+        └── VOC2007/
         	├── JPEGImages
         	├── ImageSets
         	└── Annotations
