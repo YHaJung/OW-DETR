@@ -130,7 +130,16 @@ dmypy.json
 
 
 # data
-data/
+*.jpg
+*.xml
+*.zip
+annotations/
 
 # model
 *.pth
+
+# log
+nohup/
+
+# results
+exps/
