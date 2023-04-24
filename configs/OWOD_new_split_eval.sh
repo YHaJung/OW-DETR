@@ -11,7 +11,7 @@ python -u main_open_world.py \
     --PREV_INTRODUCED_CLS 0 --CUR_INTRODUCED_CLS 19 --data_root './data/OWDETR' --train_set 't1_train' --test_set 'test' --num_classes 81 \
     --unmatched_boxes --epochs 45 --top_unk 5 --featdim 1024 --NC_branch --nc_loss_coef 0.1 --nc_epoch 9 \
     --backbone 'dino_resnet50' \
-    --resume 'exps/OWDETR_t1/checkpoint0044.pth' --viz \
+    --resume 'exps/OWDETR_t1/checkpoint0044.pth' --eval \
     --batch_size 4 \
     ${PY_ARGS}
 
