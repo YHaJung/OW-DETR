@@ -240,6 +240,8 @@ class OWDetection(VisionDataset):
             size=torch.as_tensor([int(h), int(w)]),
             iscrowd=torch.zeros(len(instances), dtype=torch.uint8)
         )
+        if len(target['boxes']) == 0:
+            target['boxes'] = target['boxes'].reshape(-1, 4)
 
         if self.transforms[-1] is not None:
             img, target = self.transforms[-1](img, target)
